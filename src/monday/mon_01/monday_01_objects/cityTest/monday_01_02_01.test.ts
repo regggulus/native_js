@@ -1,20 +1,20 @@
-import {CityType} from "./monday_01_02_01";
+import {AddressType, CityType} from "./monday_01_02_01";
 
 let city: CityType;
 
-beforeEach( () => {
+beforeEach(() => {
     city = {
         title: "New York",
         houses: [
             {
-               buildedAt: 2012,
-               repaired: false,
-               address: {
-                   number: 100,
-                   street: {
-                       title: "White street"
-                   }
-               }
+                buildedAt: 2012,
+                repaired: false,
+                address: {
+                    number: 100,
+                    street: {
+                        title: "White street"
+                    }
+                }
             },
             {
                 buildedAt: 2008,
@@ -37,13 +37,34 @@ beforeEach( () => {
                 }
             }
         ],
-        governmentBuilding: [],
+        governmentBuilding: [
+            {
+                type: "Hospital",
+                budget: 200000,
+                staffCount: 200,
+                address: {
+                    street: {
+                        title: "Central Str"
+                    }
+                }
+            },
+            {
+                type: "Fire-Station",
+                budget: 500000,
+                staffCount: 2000,
+                address: {
+                    street: {
+                        title: "Couth Str"
+                    }
+                }
+            }
+        ],
         citizensNumber: 100000
     }
 })
 //01. создайте тип CityType
 //02. заполните объект city, чтобы тесты ниже прошли
-test("test city chould contains 3 houses", () => {
+test.skip("test city chould contains 3 houses", () => {
     expect(city.houses.length).toBe(3)
 
     expect(city.houses[0].buildedAt).toBe(2012)
@@ -61,4 +82,17 @@ test("test city chould contains 3 houses", () => {
     expect(city.houses[2].address.number).toBe(101)
     expect(city.houses[2].address.street.title).toBe("Happy street")
 
+})
+test.skip("test city should contains hospital and fire station", () => {
+    expect(city.governmentBuilding.length).toBe(2)
+
+    expect(city.governmentBuilding[0].type).toBe("Hospital")
+    expect(city.governmentBuilding[0].budget).toBe(200000)
+    expect(city.governmentBuilding[0].staffCount).toBe(200)
+    expect(city.governmentBuilding[0].address.street.title).toBe("Central Str")
+
+    expect(city.governmentBuilding[1].type).toBe("Fire-Station")
+    expect(city.governmentBuilding[1].budget).toBe(500000)
+    expect(city.governmentBuilding[1].staffCount).toBe(2000)
+    expect(city.governmentBuilding[1].address.street.title).toBe("Couth Str")
 })
