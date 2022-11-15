@@ -9,7 +9,7 @@ beforeEach(() => {
     b = 2
     c = 3
 })
-test("amount must be correct", () => {
+test.skip("amount must be correct", () => {
 
     let result1 = sum(a, b)
     let result2 = sum(b, c)
@@ -18,7 +18,7 @@ test("amount must be correct", () => {
     expect(result2).toBe(5)
 
 })
-test("multiply should be correct", () => {
+test.skip("multiply should be correct", () => {
 
     let a = 1
     let b = 2
@@ -31,7 +31,7 @@ test("multiply should be correct", () => {
     expect(result2).toBe(6)
 })
 
-test("splitting into should be correct", () => {
+test.skip("splitting into should be correct", () => {
     let sent1 = "hello my friend"
     let sent2 = "Js the best programming language"
 
