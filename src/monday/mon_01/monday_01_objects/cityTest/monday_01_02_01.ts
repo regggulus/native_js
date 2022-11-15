@@ -3,7 +3,6 @@ export type StreetType = {
     title: string
 }
 export type AddressType = {
-    id: number
     number?: number
     street: StreetType
 }
@@ -29,6 +28,16 @@ export function addMoneyToBudget(building: GovernmentBuildingType, budget: numbe
     building.budget += budget
 }
 
-export const demolishHousesOnTheStreet = (city: CityType, street: string) => {
+// export const demolishHousesOnTheStreet = (city: CityType, street: string) => {
+//
+// }
 
+export function repairHouse(housesType: HousesType) {
+housesType.repaired =  true
+}
+export const toFireStaff = (buildingType: GovernmentBuildingType, staffCou: number) => {
+buildingType.staffCount -= staffCou
+}
+export const toHireStaff = (buildingType: GovernmentBuildingType, staffCou: number) => {
+buildingType.staffCount -= staffCou
 }

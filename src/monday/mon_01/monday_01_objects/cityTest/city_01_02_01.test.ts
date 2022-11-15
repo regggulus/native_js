@@ -1,4 +1,4 @@
-import {addMoneyToBudget, CityType, demolishHousesOnTheStreet} from "./monday_01_02_01";
+import {addMoneyToBudget, CityType, repairHouse, toFireStaff, toHireStaff} from "./monday_01_02_01";
 
 let city: CityType;
 
@@ -10,7 +10,6 @@ beforeEach(() => {
                 buildedAt: 2012,
                 repaired: false,
                 address: {
-                    id: 1,
                     number: 100,
                     street: {
                         title: "White street"
@@ -21,7 +20,6 @@ beforeEach(() => {
                 buildedAt: 2008,
                 repaired: false,
                 address: {
-                    id: 1,
                     number: 100,
                     street: {
                         title: "Happy street"
@@ -32,7 +30,6 @@ beforeEach(() => {
                 buildedAt: 2020,
                 repaired: false,
                 address: {
-                    id: 1,
                     number: 101,
                     street: {
                         title: "Happy street"
@@ -46,7 +43,6 @@ beforeEach(() => {
                 budget: 200000,
                 staffCount: 200,
                 address: {
-                    id: 2,
                     street: {
                         title: "Central Str"
                     }
@@ -57,7 +53,6 @@ beforeEach(() => {
                 budget: 500000,
                 staffCount: 2000,
                 address: {
-                    id: 3,
                     street: {
                         title: "Couth Str"
                     }
@@ -83,9 +78,24 @@ test("Butget should be changed for Fire-Station", () => {
 })
 //01 дополните тип HouseType (добавте порядковый id от 1 и по возрастанию)
 //02 создайте в том же файле еще одну функцию, чтобы тесты прошли
-test("Houses should be destroyed", () => {
-    demolishHousesOnTheStreet(city, "Happy street")
+// test.skip("Houses should be destroyed", () => {
+//     demolishHousesOnTheStreet(city, "Happy street")
+//
+//     expect(city.houses.length).toBe(1)
+//     expect(city.houses[0].address.id).toBe(1)
+// })
+test("House shoulhd be repared", () => {
+    repairHouse(city.houses[1])
 
-    expect(city.houses.length).toBe(1)
-    expect(city.houses[0].address.id).toBe(1)
+    expect(city.houses[1].repaired).toBeTruthy()
+})
+test("staff should be increased", () => {
+    toFireStaff(city.governmentBuilding[0], 20)
+
+    expect(city.governmentBuilding[0].staffCount).toBe(180)
+})
+test("House should be repaired", () => {
+    toHireStaff(city.governmentBuilding[1], 200)
+
+    expect(city.governmentBuilding[1].staffCount).toBe(1800)
 })
