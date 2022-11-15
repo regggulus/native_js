@@ -1,11 +1,12 @@
 export const value2 = "monday_02"
 
-type StudenType = {
+export type StudenType = {
     name: string
     age: number
     isStudying: boolean
     сommunity: string
     address: AddressType
+    technologies: Array<TechnologiesType>
     booksForLearning: Array<BooksForLearningType>
 }
 type AddressType = {
@@ -16,12 +17,16 @@ type SityType = {
     country: string
     title: string
 }
+type TechnologiesType = {
+    id: number
+    title: string
+}
 type BooksForLearningType = {
     id: number
     book: string
 }
 
-let student: StudenType  = {
+export let student: StudenType  = {
     name: "Egor",
     age: 34,
     isStudying: true,
@@ -33,6 +38,24 @@ let student: StudenType  = {
             title: "Mинск",
         }
     },
+    technologies: [
+        {
+            id: 1,
+            title: "HTML"
+        },
+        {
+            id: 2,
+            title: "CSS"
+        },
+        {
+            id: 3,
+            title: "JavaScript"
+        },
+        {
+            id: 4,
+            title: "React"
+        }
+    ],
     booksForLearning: [
         {
             id: 1,

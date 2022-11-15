@@ -7,9 +7,9 @@ import {value} from "./monday/mon_01/monday_01_tests/monday01_01";
 import {value2} from "./monday/mon_01/monday_01_objects/monday01_02";
 import {value3} from "./monday/mon_01/monday_01_objects/cityTest/monday_01_02_01";
 
-let a = value
-let b = value2
-let c = value3
+// let a = value
+// let b = value2
+// let c = value3
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
