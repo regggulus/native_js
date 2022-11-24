@@ -9,7 +9,7 @@ test('should take old man older then 90', () => {
     expect(oldAges[0]).toBe(91)
 
 })
-test('should take courses chipper 160', () => {
+test.skip('should take courses chipper 160', () => {
     const courses = [
         {title: 'CSS', price: 100},
         {title: 'HTML', price: 120},
@@ -24,7 +24,7 @@ test('should take courses chipper 160', () => {
 
 })
 
-test('get only completed tasks', () => {
+test.skip('get only completed tasks', () => {
     const tasks = [
         {id: 1, title: 'Bread', isDone: true},
         {id: 2, title: 'Milk', isDone: false},

@@ -68,7 +68,7 @@ test.skip("student shouldd be made active", () => {
 
     expect(student.isStudying).toBe(false)
 })
-test("student lives in city?", () => {
+test.skip("student lives in city?", () => {
 
     let result1 = liveCity(student, "Moscow")
     let result2 = liveCity(student, "Minsk")
