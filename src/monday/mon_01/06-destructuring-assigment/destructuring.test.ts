@@ -12,11 +12,13 @@ test("", () =>{
     /*const age = props.age
     const lessons = props.lessons*/
     const {age, lesson} = props
+    const {title} = props.address.street
     const a = props.age
     const l  = props.lesson
 
     expect(age).toBe(32)
     expect(lesson.length).toBe(2)
+    expect(title).toBe('Makaenka street')
 
     expect(a).toBe(32)
     expect(l.length).toBe(2)
