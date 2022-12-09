@@ -58,7 +58,7 @@ test.skip('list of streets of goverments buildings', () => {
 })
 
 //01 создайте в том же файле еще одну функциюб чтобы тесты прошли
-test('list of streets title', () => {
+test.skip('list of streets title', () => {
     let buildings = getStreetsTitlesOffHouses(city.houses)
 
     expect(buildings.length).toBe(3)
@@ -67,7 +67,7 @@ test('list of streets title', () => {
     expect(buildings[2]).toBe('Happy street')
 })
 
-test('create greeting messages for streets', () => {
+test.skip('create greeting messages for streets', () => {
 let message = createMessages(city.houses)
 
     expect(message.length).toBe(3)
