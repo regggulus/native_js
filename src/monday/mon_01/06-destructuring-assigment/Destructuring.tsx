@@ -14,12 +14,13 @@ type PropsType = {
 
 }
 export const ManComponent: React.FC<PropsType> = (props) => {
+    const {title, man} = props
     return (
         <div>
-            <h1>{props.title}</h1>
+            <h1>{title}</h1>
             <hr/>
             <div>
-                {props.man.name}
+                {man.name}
             </div>
         </div>
     )
