@@ -8,7 +8,7 @@ type UserType = {
     age: number
 }
 
-test('big test', () => {
+test('reference type test', () => {
     let user: UserType = {
         name: 'Egor',
         age: 34
