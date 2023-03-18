@@ -23,3 +23,20 @@ increaseAge(user)
     expect(user.age).toBe(36)
 })
 
+test('array test', () => {
+     let users = [
+         {
+             name: 'Egor',
+             age: 34,
+         },
+         {
+             name: 'Dimych',
+             age: 33,
+         },
+     ]
+
+    let admins = users
+    admins.push({name: 'Artem', age: 28})
+    expect(users[2]).toEqual({name: 'Artem', age: 28})
+})
+
