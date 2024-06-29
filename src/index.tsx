@@ -1,17 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {value} from "./monday/mon_01/monday_01_tests/monday01_01";
-import {value2} from "./monday/mon_01/monday_01_objects/monday01_02";
-import {value3} from "./monday/mon_01/monday_01_objects/cityTest/monday_01_02_01";
-import {value5} from "./monday/mon_01/monday_05_map/01_05";
+import App from "./App";
 
-// let a = value
-// let b = value2
-// let c = value3
-let monday5 = value5
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
