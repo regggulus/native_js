@@ -1,5 +1,4 @@
 import {mult, splitIntoWords, sum} from "./01";
-import exp from "constants";
 
 test('sum should be correct', () => {
     const a = 1
