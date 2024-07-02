@@ -1,15 +1,17 @@
-import {Address} from "cluster";
 
 type AddressType = {
     country: string
     city: string
     street: string
-
 }
 type PersonalType = {
     phone: string
     mail: string
     idCard: string
+}
+type TechnicalType = {
+    id: number
+    title: string
 }
 type StudentType = {
     id: number
@@ -18,6 +20,7 @@ type StudentType = {
     isStudying: boolean
     address: AddressType,
     personalDate: PersonalType
+    technicalSkills: TechnicalType[]
 
 
 }
@@ -31,9 +34,9 @@ export const student: StudentType = {
         city: 'Minsk',
         street: 'Parnikovaya, 3',
     },
-    personalData: {
-        phone: '375294841127',
-        mail: 'harry@gmail.com',
+    personalDate: {
+        phone: '3754843826',
+        mail: 'student@gmail.com',
         idCard: 'passport'
     },
     technicalSkills: [
