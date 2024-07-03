@@ -22,7 +22,6 @@ test('multiply should be correct', () => {
     expect(result1).toBe(2)
     expect(result2).toBe(6)
 })
-
 test('splitting into words should be correct', () => {
     const sent1 = 'Hello my friends'
     const sent2 = 'JS - programming language'
