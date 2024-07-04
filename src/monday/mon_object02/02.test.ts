@@ -1,6 +1,6 @@
-import {Citytype} from "./city02_02";
+import {CityType} from "./city02_02";
 
-let city: Citytype
+let city: CityType
 
 beforeEach(() => {
     city = {
@@ -60,6 +60,17 @@ test('test city should contains 3 houses', () => {
     expect(city.houses[2].address.number).toBe(101)
     expect(city.houses[2].address.street.title).toBe("Summer street")
 })
-test.skip('test city should contains hospital and station', () => {
+test('test city should contains hospital and station', () => {
+    expect(city.governmentBuilding.length).toBe(2)
 
+
+    expect(city.governmentBuilding[0].type).toBe('Hospital')
+    expect(city.governmentBuilding[0].budget).toBe(2000)
+    expect(city.governmentBuilding[0].staffCount).toBe(200)
+    expect(city.governmentBuilding[0].address.street.title).toBe('Central Str')
+
+    expect(city.governmentBuilding[1].type).toBe('Hospital')
+    expect(city.governmentBuilding[1].budget).toBe(50000)
+    expect(city.governmentBuilding[1].staffCount).toBe(1000)
+    expect(city.governmentBuilding[1].address.street.title).toBe('South Str')
 })
