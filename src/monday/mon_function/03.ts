@@ -7,6 +7,9 @@ export const sum = (a: number, b: number) => {
     )
 }
 
-export const addSkill = (student: StudentType) => {
-
+export const addSkill = (student: StudentType, skill: string) => {
+    student.technicalSkills.push({
+        id: new Date().getTime(),
+        title: skill
+    })
 }
