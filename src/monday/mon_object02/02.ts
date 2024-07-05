@@ -1,19 +1,19 @@
 
-type AddressType = {
+export type AddressType = {
     country: string
     city: string
     street: string
 }
-type PersonalType = {
+export type PersonalType = {
     phone: string
     mail: string
     idCard: string
 }
-type TechnicalType = {
+export type TechnicalType = {
     id: number
     title: string
 }
-type StudentType = {
+export type StudentType = {
     id: number
     name: string
     age: number
