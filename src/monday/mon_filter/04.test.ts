@@ -1,5 +1,5 @@
 import {CourseType} from "./04";
-import exp from "constants";
+// import export from "constants";
 
 test('should be tale old', ()=> {
     const age = [10, 24, 36, 48, 55, 63, 78, 88, 96, 101]

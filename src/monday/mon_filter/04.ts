@@ -19,6 +19,12 @@ const course = [
     {title: 'React', price: 150},
     {title: 'HTML', price: 50},
 ]
+const course = [
+    {title: 'CSS', price: 120},
+    {title: 'JavaScript', price: 220},
+    {title: 'React', price: 150},
+    {title: 'HTML', price: 50},
+]
 
 const chipPredicate = (course: CourseType) => {
     return course.price < 130
