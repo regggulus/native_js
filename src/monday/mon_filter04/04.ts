@@ -1,4 +1,4 @@
-import {student, TechnicalType} from "../mon_object02/02";
+import { TechnicalType} from "../mon_object02/02";
 
 export const age = [10, 24, 36, 48, 55, 63, 78, 88, 96, 101]
 

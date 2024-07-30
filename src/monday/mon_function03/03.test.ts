@@ -1,7 +1,7 @@
-import {StudentType} from "../mon_object02/02";
 import {addSkill} from "./03";
+import {StudentType} from "../mon_object02/02";
 
-let  student: StudentType;
+export let  student: StudentType;
 beforeEach( () => {
     student = {
         id: 1,
